@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+		rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+		crossorigin="anonymous">
+	<meta name="google-site-verification" content="iLjAsr-jpAujVpFsTbPhsatESp_yGIdgNZkRFHNiz8U" />
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Hugo 0.104.2">
+	<link rel="canonical"
+		href="https://getbootstrap.com/docs/5.2/examples/headers/">
+	<script type="text/javascript"
+		src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script>
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+		crossorigin="anonymous"></script>
+	<title>미드나잇 체이서</title>
+<style>
+td{
+	text-align:center;
+	border-color: #000000;
+	border-width:3px;
+	height: 180px;
+	width: 180px;
+}
+
+img{
+	width:80px;
+	height:80px;
+}
+
+button{
+	margin: 3px;
+	font-size:20px;
+	font-weight: bold;
+}
+
+table{
+	margin:auto;
+}
+</style>
+	
+<body>
+
+<div class="container-fluid" style="background-color:#313131; height: 100px;color:white; font-size: 35px; vertical-align: middle">
+<div class="d-flex justify-content-center pt-4">미드나잇 체이서</div>
+</div>
+<div class="container mt-5">
+<div class="row">
+<div class="col-md-6 mt-1">
+<table class="over">
+<tbody>
+<tr>
+<td id="box_con1" ondrop="drop(event)" ondragover="dragEnter(event)"></td>
+<td id="box_con2" ondrop="drop(event)" ondragover="dragEnter(event)"></td>
+<td id="box_con3" ondrop="drop(event)" ondragover="dragEnter(event)"></td>
+</tr>
+<tr>
+<td id="box_con4" ondrop="drop(event)" ondragover="dragEnter(event)"></td>
+<td id="box_con5" ondrop="drop(event)" ondragover="dragEnter(event)"></td>
+<td id="box_con6" ondrop="drop(event)" ondragover="dragEnter(event)"></td>
+</tr>
+<tr>
+<td id="box_con7" ondrop="drop(event)" ondragover="dragEnter(event)"></td>
+<td id="box_con8" ondrop="drop(event)" ondragover="dragEnter(event)"></td>
+<td id="box_con9" ondrop="drop(event)" ondragover="dragEnter(event)"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-md-6 mt-1">
+<div class="mb-2 main_con p-4" style="margin: 0 auto; width:300px; border: 3px black solid; padding: 5px;" 
+	ondrop="drop(event)" ondragover="dragEnter(event)" id="main">
+<button name="dragbox" draggable="true" ondragstart="drag(event)" id="mirror"><img class="m-1" draggable="false" src="/img/거울.png" name="img"><br>거울</button>
+<button name="dragbox" draggable="true" ondragstart="drag(event)" id="statue"><img class="m-1" draggable="false" src="/img/나팔동상.png" name="img"><br>나팔동상</button>
+<button name="dragbox" draggable="true" ondragstart="drag(event)" id="box"><img class="m-1" draggable="false" src="/img/상자.png" name="img"><br>상자</button>
+<button name="dragbox" draggable="true" ondragstart="drag(event)" id="sofa"><img class="m-1" draggable="false" src="/img/소파.png" name="img"><br>소파</button>
+<button name="dragbox" draggable="true" ondragstart="drag(event)" id="clock"><img class="m-1" draggable="false" src="/img/시계.png" name="img"><br>시계</button>
+<button name="dragbox" draggable="true" ondragstart="drag(event)" id="music_box"><img class="m-1" draggable="false" src="/img/오르골.png" name="img"><br>오르골</button>
+<button name="dragbox" draggable="true" ondragstart="drag(event)" id="closet"><img class="m-1" draggable="false" src="/img/옷장.png" name="img"><br>옷장</button>
+<button name="dragbox" draggable="true" ondragstart="drag(event)" id="bed"><img class="m-1" draggable="false" src="/img/침대.png" name="img"><br>침대</button>
+<button name="dragbox" draggable="true" ondragstart="drag(event)" id="piano"><img class="m-1" draggable="false" src="/img/피아노.png" name="img"><br>피아노</button>
+</div>
+
+<div class="container mb-5">
+<div class="d-flex justify-content-center">
+<button class="btn btn-dark btn-lg" type="button" onclick="window.location.reload();">초기화</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+let save = "";
+let saveName ="";
+let saveOrder ="";
+
+function clear() {
+		console.log("asda");
+};
+
+function dragEnter(ev) {
+	ev.preventDefault();
+   }
+   
+   function drag(ev) { 
+   	ev.dataTransfer.setData("text", ev.target.id);
+   	var data = ev.dataTransfer.getData("text");
+   	save = document.getElementById(data);
+   }
+   function drop(ev) {
+	   ev.preventDefault();
+	   var data = ev.dataTransfer.getData("text");
+	   let main = $('.main_con');
+	   if(ev.target.name == undefined){
+		   if($('#'+ev.target.id).text().length<1){
+			   ev.target.appendChild(document.getElementById(data));
+		   } else {
+			   main.innerHTML = save;
+		   }
+		   } else {
+			   main.innerHTML = save;
+		   }
+   }
+   
+</script>
+
+</body>
+</html>
