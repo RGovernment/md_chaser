@@ -26,6 +26,32 @@
 		crossorigin="anonymous"></script>
 	<title>미드나잇 체이서</title>
 <style>
+@media screen and (max-width: 782px){
+
+td{
+	text-align:center;
+	border-color: #000000;
+	border-width:3px;
+	height: 130px;
+	width: 130px;
+}
+
+img{
+	width:45px;
+	height:45px;
+	pointer-events: none;
+}
+
+button{
+	margin: 3px;
+	font-size:15px;
+	font-weight: bold;
+}
+}
+
+
+@media screen and (min-width: 783px){
+
 td{
 	text-align:center;
 	border-color: #000000;
@@ -41,10 +67,11 @@ img{
 }
 
 button{
-	z-index: 1;
+	z-index:1;
 	margin: 3px;
 	font-size:20px;
 	font-weight: bold;
+}
 }
 
 table{
@@ -84,7 +111,7 @@ table{
 <div class="mb-2 main_con p-4" style="margin: 0 auto; width:300px; border: 3px black solid; padding: 5px;" 
 	ondrop="drop(event)" ondragover="dragEnter(event)" id="main">
 <button name="dragbox" draggable="true" ondragstart="drag(event)" id="mirror"><img class="m-1" draggable="false" src="img/거울.png" name="img"><br>거울</button>
-<button name="dragbox" draggable="true" ondragstart="drag(event)" id="statue"><img class="m-1" draggable="false" src="img/나팔동상.png" name="img"><br>나팔동상</button>
+<button name="dragbox" draggable="true" ondragstart="drag(event)" id="statue"><img class="m-1" draggable="false" src="img/나팔동상.png" name="img"><br>동상</button>
 <button name="dragbox" draggable="true" ondragstart="drag(event)" id="box"><img class="m-1" draggable="false" src="img/상자.png" name="img"><br>상자</button>
 <button name="dragbox" draggable="true" ondragstart="drag(event)" id="sofa"><img class="m-1" draggable="false" src="img/소파.png" name="img"><br>소파</button>
 <button name="dragbox" draggable="true" ondragstart="drag(event)" id="clock"><img class="m-1" draggable="false" src="img/시계.png" name="img"><br>시계</button>
