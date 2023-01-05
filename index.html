@@ -26,59 +26,7 @@
 		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 	<title>미드나잇 체이서</title>
-<style>
-@media screen and (max-width: 782px){
-
-td{
-	text-align:center;
-	border-color: #000000;
-	border-width:3px;
-	height: 130px;
-	width: 130px;
-}
-
-img{
-	width:45px;
-	height:45px;
-	pointer-events: none;
-}
-
-button{
-	margin: 3px;
-	font-size:15px;
-	font-weight: bold;
-}
-}
-
-
-@media screen and (min-width: 783px){
-
-td{
-	text-align:center;
-	border-color: #000000;
-	border-width:3px;
-	height: 180px;
-	width: 180px;
-}
-
-img{
-	width:80px;
-	height:80px;
-	pointer-events: none;
-}
-
-button{
-	z-index:1;
-	margin: 3px;
-	font-size:20px;
-	font-weight: bold;
-}
-}
-
-table{
-	margin:auto;
-}
-</style>
+<link rel="stylesheet" href="/css/pageStyle.css">
 	
 <body>
 
@@ -109,7 +57,7 @@ table{
 </table>
 </div>
 <div class="col-md-6 mt-1">
-<div class="mb-2 main_con p-4" style="margin: 0 auto; width:300px; border: 3px black solid; padding: 5px;" 
+<div class="mb-2 main_box_con p-4" style="margin: 0 auto; width:300px; border: 3px black solid; padding: 5px;" 
 	ondrop="drop(event)" ondragover="dragEnter(event)" id="main">
 <button name="dragbox" draggable="true" ondragstart="drag(event)" id="mirror"><img class="m-1" draggable="false" src="img/거울.png" name="img"><br>거울</button>
 <button name="dragbox" draggable="true" ondragstart="drag(event)" id="statue"><img class="m-1" draggable="false" src="img/나팔동상.png" name="img"><br>동상</button>
@@ -132,40 +80,7 @@ table{
 </div>
 
 
-<script type="text/javascript">
-let save = "";
-let saveName ="";
-let saveOrder ="";
-
-function clear() {
-		console.log("asda");
-};
-
-function dragEnter(ev) {
-	ev.preventDefault();
-   }
-   
-   function drag(ev) { 
-   	ev.dataTransfer.setData("text", ev.target.id);
-   	var data = ev.dataTransfer.getData("text");
-   	save = document.getElementById(data);
-   }
-   function drop(ev) {
-	   ev.preventDefault();
-	   var data = ev.dataTransfer.getData("text");
-	   let main = $('.main_con');
-	   if(ev.target.name == undefined){
-		   if($('#'+ev.target.id).text().length<1){
-			   ev.target.appendChild(document.getElementById(data));
-		   } else {
-			   main.innerHTML = save;
-		   }
-		   } else {
-			   main.innerHTML = save;
-		   }
-   }
-   
-</script>
+<script src="js/pageScript.js"></script>
 
 </body>
 </html>
