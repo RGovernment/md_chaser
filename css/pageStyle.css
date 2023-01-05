@@ -5,6 +5,14 @@
 
 @media screen and (max-width: 782px){
 
+#pc_type{
+	display: none;
+}
+#mobile_type{
+	font-size:25px; font-weight: bold; text-align: center;
+}
+	
+	
 td{
 	text-align:center;
 	border-color: #000000;
@@ -28,6 +36,13 @@ button{
 
 
 @media screen and (min-width: 783px){
+	
+#pc_type{
+	font-size:25px; font-weight: bold; text-align: center;
+}
+#mobile_type{
+	display: none;
+}
 
 td{
 	text-align:center;
